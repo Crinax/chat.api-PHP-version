@@ -1,0 +1,122 @@
+* {
+  color: #333;
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .chat-form {
+  width: 60vw;
+  height: 80vh;
+  background: #55f;
+  border-radius: 5vw;
+  box-shadow: 0 0 5vw #88f;
+  display: flex;
+  justify-content: center;
+}
+body .chat-form .messages-wrapper {
+  width: 55vw;
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body .chat-form .messages-wrapper .message-recipient {
+  border-radius: 0 0 3vw 3vw;
+  height: 6vh;
+  width: 30vw;
+  margin: 0 0 1vh 0;
+  background-color: #88f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .chat-form .messages-wrapper .message-recipient .message-recipient-text {
+  font-weight: 900;
+  width: max-content;
+  padding: 0;
+  margin: 0;
+}
+body .chat-form .messages-wrapper .messages-place {
+  width: 50vw;
+  height: 60vh;
+  background-color: #ddd;
+  border-radius: 2.5vw;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 2vh 1vw;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+body .chat-form .messages-wrapper .messages-place::-webkit-scrollbar {
+  display: none;
+}
+body .chat-form .messages-wrapper .messages-place .message-body {
+  width: 49vw;
+  display: block;
+  margin-bottom: 1vw;
+}
+body .chat-form .messages-wrapper .messages-place .message-body.recipient {
+  margin-left: 1vw;
+}
+body .chat-form .messages-wrapper .messages-place .message-body.user {
+  margin-right: 1vw;
+}
+body .chat-form .messages-wrapper .messages-place .message-body .message-text {
+  margin: 0;
+  max-width: 20vw;
+  word-wrap: break-word;
+  padding: 1.5vh 1.5vw;
+  font-weight: 500;
+}
+body .chat-form .messages-wrapper .messages-place .message-body .message-text.recipient-text {
+  border-radius: 3vw 3vw 3vw 0.5vw;
+  background-color: #ccf;
+  float: left;
+}
+body .chat-form .messages-wrapper .messages-place .message-body .message-text.user-text {
+  border-radius: 3vw 3vw 0.5vw 3vw;
+  background: linear-gradient(135deg, #62f, #92f);
+  color: #ddd;
+  float: right;
+}
+body .chat-form .message-field {
+  width: 48vw;
+  height: 7vh;
+  padding: 1vh 2vw;
+  resize: none;
+  outline: none;
+  border-radius: 2.5vw;
+  margin: 1vh 0;
+  border-color: #ddd;
+  position: relative;
+  font-weight: 500;
+}
+body .chat-form .send-message {
+  width: 52vw;
+  padding: 2vh 2vw;
+  outline: none;
+  border-radius: 2.5vw;
+  border: none;
+  cursor: pointer;
+  background-color: #5f5;
+  transition: box-shadow 0.3s, background-color 0.3s;
+  font-size: 18px;
+}
+body .chat-form .send-message:hover {
+  box-shadow: 0 0 1vw 0 #5f5;
+}
+body .chat-form .send-message.block-button {
+  background-color: #aaa;
+}
+body .chat-form .send-message.block-button:hover {
+  box-shadow: 0 0 0 0 #5f5;
+}
