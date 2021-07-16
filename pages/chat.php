@@ -25,7 +25,7 @@
             </div>
             <textarea name="message" class="message-field message-textarea" placeholder="Введите сообщение..." oninput="messager.checkInput(this);"></textarea>
             <button class="send-message block-button" onclick="messager.submit()">Отправить сообщение</button>
-        </form>
+        </div>
     </div>
     <script>
         messager.view();

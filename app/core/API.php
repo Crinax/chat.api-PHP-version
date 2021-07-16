@@ -50,7 +50,13 @@
         public static function getLastMessage() {
             if (isset($_POST['uid'])) {
                 $messages = self::getFormateMessages($_POST['uid']);
-                echo json_encode($messages[count($messages)-1]);
+                if (count($messages) == 0) {
+                    echo json_encode([]);
+                }
+                else {
+                    echo json_encode($messages[count($messages)-1]);
+                }
+                
             }
             else {
                 echo json_encode(['status' => 'error']);

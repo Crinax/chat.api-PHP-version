@@ -15,9 +15,9 @@ class Messages {
         });
         this.uid = this.uid['uid'];
         this.getMessages();
-        this.lastMessage = this.getLasMessage();
+        this.lastMessage = this.getLastMessage();
     }
-    getLasMessage() {
+    getLastMessage() {
         var message;
         $.ajax({
             url: '/api/message/',
@@ -84,7 +84,7 @@ class Messages {
     listen() {
         if (this.intervalId == undefined) {
             this.intervalId = setInterval(() => {
-                var message = this.getLasMessage();
+                var message = this.getLastMessage();
                 if (JSON.stringify(message) != JSON.stringify(this.lastMessage)) {
                     this.lastMessage = message;
                     this.appendMessage(this.lastMessage);
